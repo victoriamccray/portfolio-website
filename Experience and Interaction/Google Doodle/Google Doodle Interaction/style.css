@@ -1,0 +1,26 @@
+html {
+    background-color:rgb(25, 43, 25);
+    border: solid 10px;
+    border-color: chocolate;
+}
+
+button {
+    background-color: black;
+    border: solid;
+    border-color: white;
+    color: white;
+    padding: 50px 50px;
+    margin: 100px 300px;
+    text-align: center;
+    font-size: 30px;
+    justify-content: center;
+}
+
+.eraser {
+
+    transform: scale(.7);
+}
+
+.blank {
+    background-color: white;
+}

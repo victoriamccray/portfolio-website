@@ -1,0 +1,62 @@
+<html>
+    <head>
+        <title>Google Doodle Interaction</title>
+        <script src="https://d3js.org/d3.v6.js"></script>
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <!--
+        <svg class="eraser" xmlns="http://www.w3.org/2000/svg" width="191" height="95" viewBox="0 0 191 95">
+            <g id="Group_7" data-name="Group 7" transform="translate(-41 -183)">
+              <g id="Rectangle_3" data-name="Rectangle 3" transform="translate(41 219)" fill="#707070" stroke="#707070" stroke-width="1">
+                <rect width="191" height="59" stroke="none"/>
+                <rect x="0.5" y="0.5" width="190" height="58" fill="none"/>
+              </g>
+              <g id="Rectangle_4" data-name="Rectangle 4" transform="translate(41 183)" fill="#fff" stroke="#707070" stroke-width="5">
+                <rect width="191" height="36" stroke="none"/>
+                <rect x="2.5" y="2.5" width="186" height="31" fill="none"/>
+              </g>
+            </g>
+          </svg>-->
+          
+        <script>
+            //SVG Canvas
+            const width = window.innerWidth;
+        const height= window.innerHeight;
+        
+
+        const svg = d3.select("body")
+            .append("svg")
+            .attr("width", width)
+            .attr("height", height);
+
+        //Google text
+        svg.append("text")
+    .attr("x", width/2)
+    .attr("y", height/3)
+    .text("Google")
+    .attr("font-family", "Chalktastic")
+    .attr("font-size", "200px")
+    .attr("text-anchor", "middle")
+    .attr("fill", "white");
+
+//Mouseover event function
+    svg.on("mousemove", function(event) {
+
+let x = d3.pointer(event)[0];
+let y = d3.pointer(event)[1];
+
+svg.append("circle")
+    .attr("cx", x)
+    .attr("cy", y)
+    .attr("r", 11)
+    .attr("opacity",0.95)
+    .attr("fill", "rgb(25, 43, 25)");
+
+});
+        </script>
+        <button onClick="window.location.reload();">Restart</button>
+    </body>
+</html>

@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <title>Google Doodle Interaction</title>
+        <script src="https://d3js.org/d3.v6.js"></script>
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap" rel="stylesheet">
+    </head>
+    <body class="blank">
+        <script>
+            //SVG Canvas
+            const width = window.innerWidth;
+        const height= window.innerHeight;
+        
+
+        const svg = d3.select("body")
+            .append("svg")
+            .attr("width", width)
+            .attr("height", height);
+
+        //Google text
+        var text = svg.append("text")
+            .attr("x", width/2)
+            .attr("y", height/3)
+            .text("Google")
+            .attr("font-family", "Cursive")
+            .attr("font-size", "200px")
+            .attr("text-anchor", "middle")
+            .attr("fill", "white")
+            .attr("stroke", "black");
+
+//Mouseover event function
+    text.on("mouseover", function(event) {
+
+let x = d3.pointer(event)[0];
+let y = d3.pointer(event)[1];
+console.log(x);
+console.log(y);
+
+svg.append("circle")
+    .attr("cx", x)
+    .attr("cy", y)
+    .attr("r", 11)
+    .attr("opacity",0.85)
+    .attr("fill", "black");
+
+});
+        </script>
+        <button onClick="window.location.reload();">Restart</button>
+    </body>
+</html>

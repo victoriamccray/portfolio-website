@@ -1,0 +1,229 @@
+@keyframes slidein {
+    from {
+        transform: translateX(0%)
+    }
+    to {
+        transform: translateX(100%);
+    }
+}
+h1, li{
+    font-family: "Helvetica";
+    color: white;
+}
+
+body {
+    background-color: #babdc2;
+}
+
+.outer {
+    width: 400px;
+    height: 400px;
+    margin-left: 50px;
+    margin-right: 50px;
+    padding: 50px;
+}
+.middle {
+    width: 300px;
+    height: 300px;
+    padding: 50px;
+}
+.inner {
+    width: 150px;
+    height: 150px;
+    padding: 50px;
+} 
+
+
+
+
+
+#yellow {
+    background-color:#FFFC61;
+}
+#light-orange {
+    background-color:#F3BD41;
+}
+#orange {
+    background-color: #EF9C38;
+    
+}
+#green {
+    background-color:#79AC47;
+}
+
+#yellow-green {
+    background-color: #9acd32;
+}
+.color-home {
+    margin-top: 50px;
+    padding: 100px;
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+    visibility: visible;
+
+    
+}
+
+
+
+
+<!--Navigation-->
+.top-nav {
+    background-color:grey;
+    margin-bottom: 300px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 50px;
+    width: 1000px;
+    height: 100px;
+}
+
+li {
+    display: inline;
+    margin: 100px;
+    
+}
+
+<!-- --> 
+
+#green:hover {
+    animation: slidein;
+    animation-duration: 5s;
+
+}
+
+#orange:hover {
+    animation: slidein;
+    animation-duration: 5s;
+}
+#yellow:hover {
+    animation: slidein;
+    animation-duration: 5s;
+}
+
+.color-home .tooltipText {
+    visibility: hidden;
+    margin-left: 500px;
+    padding: 20px;
+    padding-bottom: 50px;
+    width: 100px;
+    background-color: grey;
+    color: white;
+    position: absolute;
+    z-index: 1;
+}
+
+.color-home:hover .tooltipText {
+    visibility: visible;
+}
+
+
+
+.color-home #analogous-yellow {
+    visibility: hidden;
+    background-color:#FFFC61;
+    width: 75px;
+    height: 75px;
+    position: absolute;
+    transition: transform 0.8s;
+    transition-delay: 1.0s;
+
+}
+
+.color-home:hover #analogous-yellow {
+    visibility: visible;
+    transform: translate(-100px, -100px);
+}
+
+.color-home:hover #analogous-yellowgreen {
+    visibility: visible;
+    transform: translate(-100px, -100px);
+}
+
+.color-home #analogous-yellowgreen {
+    visibility: hidden;
+    background-color: #9acd32;
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    transition: transform 0.8s;
+    transition-delay: 1s;
+    z-index: 1;
+
+}
+
+.color-home #analogous-yelloworange {
+    visibility: hidden;
+    background-color: #f5b560;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    transition: transform 0.8s;
+    transition-delay: 1s;
+    z-index: 1;
+}
+
+.color-home #analogous-inneryellow {
+    visibility: hidden;
+    background-color: #FFFC61;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    transition: transform 0.8s;
+    transition-delay: 1s;
+    z-index: 1;
+}
+
+.color-home #analogous-green {
+    visibility: hidden;
+    background-color: #9acd32;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    transition: transform 0.8s;
+    transition-delay: 1s;
+    z-index: 1;
+}
+
+.color-home #analogous-orange {
+    visibility: hidden;
+    background-color:  #f5b560;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    transition: transform 0.8s;
+    transition-delay: 1s;
+    z-index: 1;
+}
+
+.color-home:hover #analogous-orange{
+    visibility: visible;
+    transform: translate(-100px, -100px);
+}
+.color-home:hover #analogous-green {
+    visibility: visible;
+    transform: translate(-100px, -100px);
+}
+
+.color-home:hover #analogous-yelloworange {
+    visibility: visible;
+    transform: translate(-100px, -100px);
+}
+.color-home:hover #analogous-inneryellow {
+    visibility: visible;
+    transform: translate(-100px, -100px) scale(0.8);
+}
+
+
+#analogous-yellowgreen:hover {
+    transform: translate(-100px, -100px);
+}
+
+.outer {
+    transition: transform 2s;
+}
+
+.outer:hover {
+    transform: scale(1.5);
+}
