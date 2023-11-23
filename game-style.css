@@ -1,0 +1,28 @@
+
+html {
+    background-color: rgb(169, 157, 156);
+}
+
+body {
+    margin: 100px 100px;
+    padding: 100px 100px;
+    text-align: center;
+    justify-content: center;
+    border: solid salmon;
+}
+
+button {
+    background-color: salmon;
+    color: white;
+    border: solid white;
+    border-radius: 2px;  
+}
+
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+h2 {
+    color: white;
+}
