@@ -2,6 +2,12 @@
 const width = window.innerWidth;
 const height = window.innerHeight;
 
+// Define other constants
+const rectWidth = 75;
+const rectHeight = 150;
+const squareSize = 50;
+let timeElapsed = 0; // Assuming timeElapsed is a variable you intend to use
+
 const svg = d3.select("#game-container")
     .append("svg")
     .attr("width", width)
