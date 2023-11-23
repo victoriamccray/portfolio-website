@@ -1,3 +1,7 @@
+// Define width and height variables
+const width = window.innerWidth;
+const height = window.innerHeight;
+
 const svg = d3.select("#game-container")
     .append("svg")
     .attr("width", width)
