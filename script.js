@@ -1,47 +1,31 @@
+// Changes Character Size with Slider
+var characterSize = d3.select("#slider").property("value");
+var initialCharacterY = height / 2 - rectHeight / 2; // Adjusted for vertical centering
 
-            //SVG canvas
-            const width = window.innerWidth;
-        const height= window.innerHeight;
-        const maxRadius = 100;
+var character = svg.append("rect")
+    .attr("x", 10)
+    .attr("y", initialCharacterY)
+    .attr("width", rectWidth)
+    .attr("height", rectHeight)
+    .attr("fill", "red")
+    .attr("class", "character");
 
-        var rectWidth = 75;
-        var rectHeight = 150;
+d3.select("#slider").on("input", function () {
+    characterSize = d3.select(this).property("value");
+    character.attr("width", characterSize);
+});
 
-        var squareSize = 50;
-        var timeElapsed = 0;
+// Uses click event for character to jump
+d3.select("#jump").on("click", function () {
+    character.transition()
+        .attr("y", initialCharacterY - 50) // Adjusted for jump height
+        .attr("opacity", 1)
+        .transition()
+        .duration(500)
+        .attr("y", initialCharacterY); // Back to the original position
+});
 
-        const svg = d3.select("body")
-            .append("svg")
-            .attr("width", width)
-            .attr("height", height);
-
-//Changes Character Size with Slider
-        var characterSize = d3.select("#slider").property("value");
-            var character = svg.append("rect")
-                .attr("x", 10)
-                .attr("y", height/2)
-                .attr("width", rectWidth)
-                .attr("height", rectHeight)
-                .attr("fill", "red")
-                .attr("class","character");
-
-                d3.select("#slider").on("input", function() {
-                    characterSize = d3.select(this).property("value");
-
-                    character.attr("width", characterSize);
-                });
-
-        // Uses click event for character to jump
-        d3.select("#jump").on("click", function() {
-            character.transition()
-            .attr("y", height/3)
-            .attr("opacity", 1)
-            .transition()
-            .duration(500)
-            .attr("y", height/2)
-        });
-
-        var characterY = d3.select(".character").attr("y");
+var characterY = d3.select(".character").attr("y");
         
     //animates blue block from rightmost part of screen to leftmost screen
 function runBlock() {
